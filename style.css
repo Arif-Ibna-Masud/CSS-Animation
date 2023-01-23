@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+
+h1{
+    color: rgb(0, 174, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#anemation{
+    background-color: rgb(0, 0, 0);
+    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+#anemation::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/footer-shape1.png);
+    animation: imgchange 1s linear 1s infinite;
+}
+
+
+#anemation::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/footer-shape2.png);
+    animation: imgchangeTow 1s linear 1s infinite;
+}
+
+
+@keyframes imgchange {
+  0%{
+opacity: 0;
+  }  
+  50%{
+opacity: 1;
+  }
+  10%{
+opacity: 0;
+  }
+}
+
+
+@keyframes imgchangeTow {
+    0%{
+  opacity: 1;
+    }  
+    50%{
+  opacity: 0;
+    }
+    10%{
+  opacity: 1;
+    }
+  }
